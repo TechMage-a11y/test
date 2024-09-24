@@ -1,5 +1,5 @@
-correct_logins = ["743"]
-correct_passwords = ["cf"]
+correct_login = "743"
+correct_password = "5634"
 
 
 print("--------------------------\nДобро пожаловать\n--------------------------")
@@ -10,11 +10,11 @@ while count < 3:
     print("--------------------------")
     password = input("Введите пароль: ")
     print("--------------------------")
-    if login == correct_logins and password == correct_passwords:
+    if login == correct_login and password == correct_password:
         print("Вы вошли в систему! 743!")
         print("--------------------------")
         break
-    else:
+    elif login != correct_login or password != correct_password:
         print("Неверный логин или пароль! Повторите попытку")
         print("--------------------------")
         count += 1
