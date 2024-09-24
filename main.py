@@ -1,19 +1,24 @@
-correct_logins = ["user_743", "user_123", "admin"]
-correct_passwords = ["cf63m", "pm5dw123", "py5en6"]
+correct_logins = ["743"]
+correct_passwords = ["cf"]
 
-print("--------------------------")
-login = input("Введите логин: ")
-print("--------------------------")
-password = input("Введите пароль: ")
-print("--------------------------")
 
-print("--------------------------")
-if login == correct_logins[0] and password == correct_passwords[0]:
-    print("Добро пожаловать, user_743!")
-elif login == correct_logins[1] and password == correct_passwords[1]:
-    print("Добро пожаловать, user_123!")
-elif login == correct_logins[2] and password == correct_passwords[2]:
-    print("Добро пожаловать, админ!")
-else:
-    print("Неправильный логин или пароль. Попробуйте еще раз.")
-print("--------------------------")
+print("--------------------------\nДобро пожаловать\n--------------------------")
+
+count = 0
+while count < 3:
+    login = input("Введите логин: ")
+    print("--------------------------")
+    password = input("Введите пароль: ")
+    print("--------------------------")
+    if login == correct_logins and password == correct_passwords:
+        print("Вы вошли в систему! 743!")
+        print("--------------------------")
+        break
+    else:
+        print("Неверный логин или пароль! Повторите попытку")
+        print("--------------------------")
+        count += 1
+        if count == 3:
+            print("Вы исчерпали все попытки! До свидания!")
+            print("--------------------------")
+            break
